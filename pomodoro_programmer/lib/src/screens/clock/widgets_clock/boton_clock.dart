@@ -1,16 +1,17 @@
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-class BotonIntro extends StatelessWidget {
+class BotonStart extends StatelessWidget {
   final String textBtn;
-  final String ruta;
+  final Function onPressed;
+  final Color color;
+  final IconData icon;
   
-  const BotonIntro({
+  const BotonStart({
     Key? key, 
     required this.textBtn,  
-    required this.ruta,
+    required this.onPressed, 
+    this.color=Colors.white,
+    this.icon=Icons.arrow_downward,
   }) : super(key: key);
 
   @override
@@ -28,7 +29,7 @@ class BotonIntro extends StatelessWidget {
   final ButtonStyle style =
   ButtonStyle(
     
-    backgroundColor: MaterialStateProperty.all<Color>(Color(0xff0f50e9)),
+    backgroundColor: MaterialStateProperty.all<Color>(this.color),
     
     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
       RoundedRectangleBorder(            
@@ -38,17 +39,26 @@ class BotonIntro extends StatelessWidget {
 
     return 
         SizedBox(
-          width: 300,
-          height: 40,
+          width: 120,
+          height: 100,
           child: ElevatedButton(
             onPressed: (){
               
-              Navigator.pushReplacementNamed(context, ruta);
+              onPressed();
             },
             style: style,                
-            child: Text( textBtn,
-                 style: textStyle2,
-                   ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(this.icon,
+                size: 50,
+                ),
+                Text( textBtn,
+                style: textStyle2,
+                ),
+              ],
+
+            ),
           )
         );
       

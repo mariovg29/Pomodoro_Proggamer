@@ -156,7 +156,12 @@ class Contenido extends StatelessWidget {
                  // ignore: prefer_const_literals_to_create_immutables
                  children: [
                     SizedBox(height: 150,),                  
-                   SpinPerfect(child: BotonesRedes(textBtn: 'Entendido',  ruta: 'clock',)),
+                   SpinPerfect(
+                     child: BotonIntro(
+                       textBtn: 'Entendido',  
+                       ruta: 'main',
+                       )
+                       ),
                  ],
                ),
              )
