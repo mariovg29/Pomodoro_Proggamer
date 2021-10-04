@@ -27,6 +27,8 @@ static int timeInMinute =10;
 static int sec= 59;
 int timeInSec= timeInMinute*60;
 Timer? timer;
+String textMood='';
+
 
 // double breakpercent=0;
  static int breaktimeInMinute =5;
@@ -40,6 +42,7 @@ Timer? timer;
 
   @override
   Widget build(BuildContext context) {
+    
     var textStyle = TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,
@@ -71,7 +74,7 @@ Timer? timer;
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Header(text: 'Pomodoro Clock',),
-              BuildCrono(percent: percent, timeInMinute: timeInMinute, sec: sec),
+              BuildCrono(percent: percent, timeInMinute: timeInMinute, sec: sec,textMood: textMood),
               SizedBox(height: 30.0,),
                _fondoBotones(boxDecoration, textStyle),
                   

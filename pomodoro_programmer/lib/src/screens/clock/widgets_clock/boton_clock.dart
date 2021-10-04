@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BotonStart extends StatelessWidget {
+
   final String textBtn;
   final Function onPressed;
   final Color color;
@@ -18,8 +19,10 @@ class BotonStart extends StatelessWidget {
   Widget build(BuildContext context) {
     
     
+    
     var textStyle2 = TextStyle(
-       color: Colors.white,
+       color: Color(0xff35425e),
+       //Colors.white,
        letterSpacing: 2.0,
        fontSize: 15,
        fontWeight: FontWeight.bold,
@@ -51,6 +54,7 @@ class BotonStart extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(this.icon,
+                color: Color(0xff35425e),
                 size: 50,
                 ),
                 Text( textBtn,

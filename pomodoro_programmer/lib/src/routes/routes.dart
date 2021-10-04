@@ -2,7 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:pomodoro_programmer/src/screens/clock/clock_screen.dart';
-import 'package:pomodoro_programmer/src/screens/clock/widgets_clock/main.dart';
+import 'package:pomodoro_programmer/src/screens/clock/widgets_clock/main_clock.dart';
 import 'package:pomodoro_programmer/src/screens/home/home.dart';
 import 'package:pomodoro_programmer/src/screens/introduction/introduction_screen.dart';
 

@@ -157,10 +157,12 @@ class Contenido extends StatelessWidget {
                  children: [
                     SizedBox(height: 150,),                  
                    SpinPerfect(
-                     child: BotonIntro(
-                       textBtn: 'Entendido',  
-                       ruta: 'main',
-                       )
+                     child: Hero(tag: 1,
+                       child: BotonIntro(
+                         textBtn: 'Entendido',  
+                         ruta: 'main',
+                         ),
+                     )
                        ),
                  ],
                ),
